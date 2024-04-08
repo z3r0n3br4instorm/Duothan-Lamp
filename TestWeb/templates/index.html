@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333333;
+        }
+        button {
+            color: #333333;
+            background-color: #f4f4f4;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello Arduino</h1>
+        <p>LED Test.</p>
+        <button id="OnButton">Turn OFF LED</button>
+        <button id="OffButton">Turn On LED</button>
+        <script>
+            document.getElementById('OffButton').addEventListener('click', function() {
+                fetch('/turnOff',{
+                    method: 'POST'
+                });
+            });
+
+            document.getElementById('OnButton').addEventListener('click', function() {
+                fetch('/turnOn',{
+                    method: 'POST'
+                });
+            });
+        </script>
+    </div>
+    </div>
+</body>
+</html>
