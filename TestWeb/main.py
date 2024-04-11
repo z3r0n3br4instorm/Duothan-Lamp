@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import pyfirmata
 # Create a Flask instance
 app = Flask(__name__)
-# board = pyfirmata.Arduino('/dev/ttyACM0')
+board = pyfirmata.Arduino('/dev/ttyACM0')
 
 
 # Define a route and a view function
@@ -12,7 +12,7 @@ def hello_world():
 
 @app.route('/turnOffbutt/<int:value>/<int:status>', methods=['POST'])
 def turnOffbutt(value, status):
-    # board.digital[value].write(status)
+    board.digital[value].write(status)
     print("Ready :",value, status)
     return '', 204
 
