@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, World!</title>
+    <title>Duothan 4.0</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,22 +32,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hello Arduino</h1>
-        <p>LED Test.</p>
-        <button id="OnButton">Turn OFF LED</button>
-        <button id="OffButton">Turn On LED</button>
+        <h1>Duothan Lamps Demo</h1>
         <script>
-            document.getElementById('OffButton').addEventListener('click', function() {
-                fetch('/turnOff',{
-                    method: 'POST'
+            for (let i = 1; i <= 13; i++) {
+                const lampNumber = i;
+                document.write(`<p>Lamp ${lampNumber}</p>`);
+                document.write(`<button id="Lmp${lampNumber}ON">Turn OFF Lamp</button>`);
+                document.write(`<button id="Lmp${lampNumber}OFF">Turn On Lamp</button>`);
+                document.getElementById(`Lmp${lampNumber}ON`).addEventListener('click', function() {
+                    fetch(`/turnOffbutt/${lampNumber + 1}/1`, {
+                        method: 'POST'
+                    });
                 });
-            });
-
-            document.getElementById('OnButton').addEventListener('click', function() {
-                fetch('/turnOn',{
-                    method: 'POST'
+                document.getElementById(`Lmp${lampNumber}OFF`).addEventListener('click', function() {
+                    fetch(`/turnOffbutt/${lampNumber + 1}/0`, {
+                        method: 'POST'
+                    });
                 });
-            });
+            }
         </script>
     </div>
     </div>
