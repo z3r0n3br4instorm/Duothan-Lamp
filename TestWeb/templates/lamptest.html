@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .wrapper {
+        width: 90%;
+        height: fit-content;
+        background: transparent;
+        padding-top: 50px;
+        margin: auto;
+        margin-bottom: 80px;
+      }
+
+      .checkbox_item .title {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e5e9ec;
+        width: fit-content;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+        text-align: center;
+        color: #ffffff;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      .checkbox_item .checkbox_wrap {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        width: 100px;
+        margin: 0 auto 50px;
+      }
+
+      .checkbox_item:last-child .checkbox_wrap {
+        margin-bottom: 0;
+      }
+
+      .checkbox_item .checkbox_wrap .checkbox_inp {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      .checkbox_item .checkbox_wrap .checkbox_mark {
+        display: inline-block;
+        position: relative;
+        border-radius: 25px;
+        box-shadow: 5px 5px 0px #970032;
+      }
+
+      .checkbox_item .checkbox_wrap .checkbox_mark:before,
+      .checkbox_item .checkbox_wrap .checkbox_mark:after {
+        content: "";
+        position: absolute;
+        transition: all 0.5s ease;
+      }
+
+      /* skewed styles */
+      .checkbox_item.citem_3 .checkbox_wrap .checkbox_mark {
+        width: 120px;
+        height: 50px;
+        padding: 2px;
+        border-radius: 0;
+        transform: skew(-10deg);
+        overflow: hidden;
+      }
+
+      .checkbox_item.citem_3 .checkbox_wrap .checkbox_mark:before,
+      .checkbox_item.citem_3 .checkbox_wrap .checkbox_mark:after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 25px;
+        color: #ff0057;
+        font-weight: bold;
+      }
+
+      .checkbox_item.citem_3 .checkbox_wrap .checkbox_mark:before {
+        content: "lAMP";
+        background: #ffffff;
+      }
+
+      .checkbox_item.citem_3 .checkbox_wrap .checkbox_mark:after {
+        content: "ON";
+        left: -120px;
+        background: #ff0057;
+        color: #ffffff;
+      }
+
+      .checkbox_item.citem_3
+        .checkbox_wrap
+        .checkbox_inp:checked
+        ~ .checkbox_mark:after {
+        left: 0;
+      }
+
+      .checkbox_item.citem_3
+        .checkbox_wrap
+        .checkbox_inp:checked
+        ~ .checkbox_mark:before {
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      style="
+        height: 100vh;
+        width: 100%;
+        background-image: url(assets/backdrop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      "
+    >
+      <div style="justify-content: center; width: 100%; padding-top: 50px">
+        <center>
+          <img
+            src="assets/logo.svg"
+            style="margin-left: auto; margin-right: auto; margin-bottom: 80px"
+            alt=""
+          />
+        </center>
+
+        <div
+          style="
+            height: 80vh;
+            width: 90%;
+            max-width: 800px;
+            background-image: url(assets/baseContainer.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 60px;
+          "
+        >
+          <!-- <div class="wrapper">
+            <div class="checkbox_item citem_3">
+              <div class="title">Zeron Brainstom</div>
+              <label class="checkbox_wrap">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="your-checkbox-id"
+                  class="checkbox_inp"
+                />
+                <span class="checkbox_mark"></span>
+              </label>
+            </div>
+          </div> -->
+          <div
+            style="
+              overflow-x: hidden;
+              overflow-y: auto;
+              height: 70%;
+              width: 100%;
+              margin: auto;
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            "
+          >
+            <script>
+              const names = [
+                "Zeron1",
+                "Zeron2",
+                "Zeron3",
+                "Zeron4",
+                "Zeron5",
+                "Zeron6",
+                "Zeron7",
+                "Zeron8",
+                "Zeron9",
+                "Zeron10",
+                "Zeron11",
+                "Zeron12",
+              ];
+              for (let i = 1; i <= 12; i++) {
+                const lampNumber = i;
+                document.write(
+                  `<div class="wrapper">
+                    <div class="checkbox_item citem_3">
+                        <div class="title">${names[lampNumber - 1]} Brainstorm</div>
+                        <label class="checkbox_wrap">
+                            <input
+                            type="checkbox"
+                            name="checkbox"
+                            id="your-checkbox-id${lampNumber}"
+                            class="checkbox_inp"
+                            />
+                            <span class="checkbox_mark"></span>
+                        </label>
+                        </div>
+                    </div>`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const checkbox = document.getElementById("your-checkbox-id1");
+      const checkbox2 = document.getElementById("your-checkbox-id2");
+      const checkbox3 = document.getElementById("your-checkbox-id3");
+      const checkbox4 = document.getElementById("your-checkbox-id4");
+      const checkbox5 = document.getElementById("your-checkbox-id5");
+      const checkbox6 = document.getElementById("your-checkbox-id6");
+      const checkbox7 = document.getElementById("your-checkbox-id7");
+      const checkbox8 = document.getElementById("your-checkbox-id8");
+      const checkbox9 = document.getElementById("your-checkbox-id9");
+      const checkbox10 = document.getElementById("your-checkbox-id10");
+      const checkbox11 = document.getElementById("your-checkbox-id11");
+      const checkbox12 = document.getElementById("your-checkbox-id12");
+
+      function uncheckAfterDelay(check) {
+        setTimeout(() => {
+          check.checked = false;
+        }, 3000);
+      }
+
+      checkbox.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox);
+        }
+      });
+      checkbox2.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox2);
+        }
+      });
+      checkbox3.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox3);
+        }
+      });
+      checkbox4.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox4);
+        }
+      });
+      checkbox5.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox5);
+        }
+      });
+      checkbox6.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox6);
+        }
+      });
+      checkbox7.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox7);
+        }
+      });
+      checkbox8.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox8);
+        }
+      });
+      checkbox9.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox9);
+        }
+      });
+      checkbox10.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox10);
+        }
+      });
+      checkbox11.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox11);
+        }
+      });
+      checkbox12.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox12);
+        }
+      });
+    </script>
+  </body>
+</html>
