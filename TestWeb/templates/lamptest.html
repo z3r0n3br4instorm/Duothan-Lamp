@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Duothan 4.0 Lamps</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
       body {
@@ -95,7 +95,7 @@
       }
 
       .checkbox_item.citem_3 .checkbox_wrap .checkbox_mark:before {
-        content: "lAMP";
+        content: "OFF";
         background: #ffffff;
       }
 
@@ -126,7 +126,7 @@
       style="
         height: 100vh;
         width: 100%;
-        background-image: url(assets/backdrop.svg);
+        background-image: url(https://duothan.ieeensbm.org/assets/backdrop.svg);
         background-size: cover;
         background-repeat: no-repeat;
         overflow: hidden;
@@ -135,7 +135,7 @@
       <div style="justify-content: center; width: 100%; padding-top: 50px">
         <center>
           <img
-            src="assets/logo.svg"
+            src="https://duothan.ieeensbm.org/assets/logo.svg"
             style="margin-left: auto; margin-right: auto; margin-bottom: 80px"
             alt=""
           />
@@ -146,7 +146,7 @@
             height: 80vh;
             width: 90%;
             max-width: 800px;
-            background-image: url(assets/baseContainer.svg);
+            background-image: url(https://duothan.ieeensbm.org/assets/baseContainer.svg);
             background-size: contain;
             background-repeat: no-repeat;
             margin-left: auto;
@@ -181,12 +181,12 @@
           >
             <script>
               const names = [
-                "Zeron1",
-                "Zeron2",
-                "Zeron3",
-                "Zeron4",
-                "Zeron5",
-                "Zeron6",
+                "Dr. Mohommed Shafraz",
+                "Dr. Pabudi Abeyrathne",
+                "Dr. Chaminda Wijesinghe",
+                "Mr. Anton Jayakody",
+                "Mr. Chamara Disanayake",
+                "Dr. Zerone Brianstorm",
                 "Zeron7",
                 "Zeron8",
                 "Zeron9",
@@ -199,7 +199,7 @@
                 document.write(
                   `<div class="wrapper">
                     <div class="checkbox_item citem_3">
-                        <div class="title">${names[lampNumber - 1]} Brainstorm</div>
+                        <div class="title">${names[lampNumber - 1]}<br><br>Lamp Status</div>
                         <label class="checkbox_wrap">
                             <input
                             type="checkbox"
@@ -235,67 +235,103 @@
       function uncheckAfterDelay(check) {
         setTimeout(() => {
           check.checked = false;
-        }, 3000);
+        }, 2000);
       }
 
       checkbox.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox);
+          fetch(`/turnOffbutt/${2}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox2.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox2);
+          fetch(`/turnOffbutt/${3}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox3.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox3);
+          fetch(`/turnOffbutt/${4}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox4.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox4);
+          fetch(`/turnOffbutt/${5}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox5.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox5);
+          fetch(`/turnOffbutt/${6}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox6.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox6);
+          fetch(`/turnOffbutt/${7}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox7.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox7);
+          fetch(`/turnOffbutt/${8}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox8.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox8);
+          fetch(`/turnOffbutt/${9}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox9.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox9);
+          fetch(`/turnOffbutt/${10}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox10.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox10);
+          fetch(`/turnOffbutt/${11}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox11.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox11);
+          fetch(`/turnOffbutt/${12}/0`, {
+                        method: 'POST'
+                    });
         }
       });
       checkbox12.addEventListener("change", function () {
         if (this.checked) {
           uncheckAfterDelay(checkbox12);
+          fetch(`/turnOffbutt/${13}/0`, {
+                        method: 'POST'
+                    });
         }
       });
     </script>
