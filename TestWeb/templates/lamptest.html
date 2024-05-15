@@ -194,7 +194,7 @@
                 "Zeron11",
                 "Zeron12",
               ];
-              for (let i = 1; i <= 12; i++) {
+              for (let i = 1; i <= 16; i++) {
                 const lampNumber = i;
                 document.write(
                   `<div class="wrapper">
@@ -231,6 +231,10 @@
       const checkbox10 = document.getElementById("your-checkbox-id10");
       const checkbox11 = document.getElementById("your-checkbox-id11");
       const checkbox12 = document.getElementById("your-checkbox-id12");
+      const checkbox13 = document.getElementById("your-checkbox-id13");
+      const checkbox14 = document.getElementById("your-checkbox-id14");
+      const checkbox15 = document.getElementById("your-checkbox-id15");
+      const checkbox16 = document.getElementById("your-checkbox-id16");
 
       function uncheckAfterDelay(check) {
         setTimeout(() => {
@@ -330,6 +334,38 @@
         if (this.checked) {
           uncheckAfterDelay(checkbox12);
           fetch(`/turnOffbutt/${13}/0`, {
+                        method: 'POST'
+                    });
+        }
+      });
+      checkbox13.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox12);
+          fetch(`/turnOffbutt/${14}/0`, {
+                        method: 'POST'
+                    });
+        }
+      });
+      checkbox14.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox12);
+          fetch(`/turnOffbutt/${15}/0`, {
+                        method: 'POST'
+                    });
+        }
+      });
+      checkbox15.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox12);
+          fetch(`/turnOffbutt/${16}/0`, {
+                        method: 'POST'
+                    });
+        }
+      });
+      checkbox16.addEventListener("change", function () {
+        if (this.checked) {
+          uncheckAfterDelay(checkbox12);
+          fetch(`/turnOffbutt/${17}/0`, {
                         method: 'POST'
                     });
         }
