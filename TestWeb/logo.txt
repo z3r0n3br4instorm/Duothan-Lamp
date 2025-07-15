@@ -1,28 +1,22 @@
-
-
-      ::::::                         :::::      DUOTHAN 5.0 - LAMP 2.0 Firmware
-    ::::::::                         :::::::    -----------------------------------------
-   ::::                                  ::::   
-   ::::                                  ::::   System IP: {IP_ADDR}
-   ::::                                  ::::   Active Lamps: {0}
-   ::::                                  ::::   Trigger Status: {TRIGGER_STATUS}
-    :::                                  ::::   Up-Time: {TIME}
-    ::::                                 :::    Main Server Battery Power: {POWER}
-    ::::                                 :::    Main Server CPU Load: {LOAD}
-   ::::                                  ::::   Main Server RAM Load: {LOAD}
-::::::       ::::::::::   ::::::::::      ::::::
-::::::     :::::-  ::::::::::   :::::     ::::::
-   ::::   :::-        ::::         :::   ::::   
-    :::: :::-          ::           :::  :::    
-    :::: :::                        :::  :::    
-   ::::  ::::                      ::::  ::::   
-   ::::   ::::                    ::::   ::::   
-   ::::    ::::                  ::::    ::::   
-   ::::      ::::              ::::      ::::   
-   :::::                     :::::       ::::   
-    :::::::::::::::::      :::::::::::::::::    
-       ::::::::::::::::  :::::::::::::::::      
-                     :::::::                    Powered by IEEE Computer Society of NSBM
-                       ::                       #EXCOM2526
-
-[UNHIDE_THIS_INCASE_ERROR]
+     ......                       .....     DUOTHAN 5.0 - LAMP 2.0 Firmware
+    ......                        .......   --------------------------------
+   ....                               ...   
+   ...                                ...   System IP: {IP_ADDR}
+   ...                                ...   Active Lamps: {0}
+   ....                              ....   Trigger Status: {TRIGGER_STATUS}
+   ....                              ....   Up-Time: {TIME}
+    ...                              ....   
+   ....                              ....   
+......      ........    ........       .....
+......    .....  ..........  .....     .....
+   ....  ...        ....        ...  ....   
+    ... ...           .          ... ....   
+   .... ...                      ... ....   
+   ....  ...                    ...  ....   
+   ...    ...                  ...    ...   Control System Battery Power: {POWER}
+   ...     ....              ....     ...   Control System CPU Load: {LOAD}
+   ....                    .....      ...   Control System RAM Load: {LOAD}
+    .....                .....     ......   
+     ................  ................     Powered by IEEE Computer Society of NSBM
+                   .......                  #EXCOM2526
+                     ..                     
