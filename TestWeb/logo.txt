@@ -5,7 +5,7 @@
    ::::                                  ::::   
    ::::                                  ::::   System IP: {IP_ADDR}
    ::::                                  ::::   Active Lamps: {0}
-   ::::                                  ::::   Trigger Status: {0}
+   ::::                                  ::::   Trigger Status: {TRIGGER_STATUS}
     :::                                  ::::   Up-Time: {TIME}
     ::::                                 :::    Main Server Battery Power: {POWER}
     ::::                                 :::    Main Server CPU Load: {LOAD}
@@ -25,3 +25,4 @@
                      :::::::                    Powered by IEEE Computer Society of NSBM
                        ::                       #EXCOM2526
 
+[UNHIDE_THIS_INCASE_ERROR]
