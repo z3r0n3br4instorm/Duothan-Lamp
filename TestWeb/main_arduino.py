@@ -80,15 +80,19 @@ def create_tui_display():
     text = Text()
     for line in display_text.split('\n'):
         if "DUOTHAN 5.0" in line:
-            text.append(line + "\n", style="bold cyan")
+            text.append(line, style="bold cyan")
         elif "ERROR:" in line or "ERROR" in trigger_status and "Trigger Status:" in line:
-            text.append(line + "\n", style="bold red")
+            text.append(line, style="bold red")
         elif ":::" in line or "██" in line:
-            text.append(line + "\n", style="bold magenta")  # Pink for logo
+            text.append(line, style="bold magenta")  # Pink for logo
         else:
-            text.append(line + "\n", style="cyan")  # Cyan for rest of text
+            text.append(line, style="cyan")  # Cyan for rest of text
+        
+        # Add newline only if not the last line
+        if line != display_text.split('\n')[-1]:
+            text.append("\n")
     
-    return Panel(text, title="[bold cyan]DUOTHAN LAMP CONTROL SYSTEM[/bold cyan]", border_style="cyan")
+    return text
 
 def update_display():
     """Update the TUI display"""
