@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import pyfirmata
+import pyfirmata2
 import time
 import threading
 import os
@@ -111,7 +111,7 @@ tui_thread.start()
 
 # Initialize Arduino
 try:
-    board = pyfirmata.Arduino('/dev/ttyACM0')
+    board = pyfirmata2.Arduino('/dev/ttyACM0')
     
     # Resetting the state of the all switches
     for i in range(2,13):
